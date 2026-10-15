@@ -1,0 +1,72 @@
+# Dependencies
+node_modules/
+dist/
+*.egg-info/
+.pnpm-store/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Database
+*.db
+*.xls
+*.xlsx
+*.db.bak*
+*.sqlite
+*.sqlite3
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Coverage & test
+coverage/
+.pytest_cache/
+.tox/
+.nox/
+*.cover
+htmlcov/
+
+# Temp files
+*.tmp
+*.temp
+token_*.txt
+check_enc.py
+
+# Excel / data files
+*.xlsx
+backup/
+
+# Docker
+docker-compose.override.yml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+$RECYCLE.BIN/
+
+# local agent files
+app_v2/
+skills/
+
+# bak
+*.bak
+record/
+frontend/

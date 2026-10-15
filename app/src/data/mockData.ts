@@ -1,0 +1,97 @@
+﻿import type { Ticket, Category, User } from '@/types';
+
+export const buildings = [
+  '办公楼A',
+  '办公楼B',
+  '办公楼C',
+  '会议室',
+  '研发楼',
+  '行政楼',
+  '制造车间1栋',
+  '制造车间2栋',
+  '仓储中心',
+  '员工活动中心',
+  '餐厅',
+  '信息中心',
+];
+
+export const categories: Category[] = [
+  { id: 1, name: '网络不通' },
+  { id: 2, name: '网速慢' },
+  { id: 3, name: 'WiFi 信号弱' },
+  { id: 4, name: '设备故障' },
+  { id: 5, name: '其他' },
+];
+
+export const users: User[] = [
+  { id: 'u-1', user_id: 'T001', name: '李工', role: 'submitter', avatar: '/images/avatar1.jpg', phone: '13800138001', department: '计算机系' },
+  { id: 'u-2', user_id: 'S001', name: '赵工', role: 'handler', avatar: '/images/avatar2.jpg', phone: '13900139002', department: '网络运维组' },
+  { id: 'u-3', user_id: 'S002', name: '张三', role: 'handler', avatar: '', phone: '', department: '网络运维组' },
+  { id: 'u-4', user_id: 'S003', name: '李四', role: 'handler', avatar: '', phone: '', department: '网络运维组' },
+  { id: 'u-5', user_id: 'FrrSystemAdmin', name: '管理员', role: 'admin', avatar: '/images/avatar3.jpg', phone: '', department: '' },
+];
+
+export const initialTickets: Ticket[] = [
+  {
+    id: 1,
+    reporter_id: 'T001',
+    reporter_name: '王教授',
+    contact: '13800138001',
+    location: '办公楼A 305办公室',
+    category: '网络不通',
+    description: '从今天上午9点开始，办公室内的所有电脑都无法连接互联网。已经尝试过重启电脑和路由器，但问题依然存在。',
+    status: 'pending',
+    created_at: '2025-05-08 09:30',
+  },
+  {
+    id: 2,
+    reporter_id: 'S001',
+    reporter_name: '张研究员',
+    contact: '13900139002',
+    location: '研发楼 201实验室',
+    category: '网速慢',
+    description: '实验室的网络速度非常慢，下载文件只有几十KB/s。',
+    solution: '更换了新的千兆端口模块后网络恢复正常。',
+    status: 'resolved',
+    created_at: '2025-05-08 10:15',
+    completed_at: '2025-05-08 14:20',
+    assignee_id: 'S001',
+    assignee_name: '赵工',
+    collaborators: [{ user_id: 'S002', user_name: '张三' }],
+  },
+  {
+    id: 3,
+    reporter_id: 'admin',
+    reporter_name: '张工',
+    contact: '13700137003',
+    location: '主会议室 三楼洽谈区',
+    category: 'WiFi 信号弱',
+    description: '主会议室三楼洽谈区的WiFi信号非常弱，手机经常断连，影响客户演示与在线会议。',
+    status: 'processing',
+    created_at: '2025-05-08 11:00',
+    assignee_id: 'S001',
+    assignee_name: '赵工',
+  },
+  {
+    id: 4,
+    reporter_id: 'T001',
+    reporter_name: '赵教授',
+    contact: '13600136004',
+    location: '办公楼B 408会议室',
+    category: '设备故障',
+    description: '会议室内的电脑无法通过企业内网认证，提示"认证服务器无响应"。',
+    status: 'pending',
+    created_at: '2025-05-09 08:45',
+  },
+  {
+    id: 5,
+    reporter_id: 'S001',
+    reporter_name: '刘博士',
+    contact: '13500135005',
+    location: '信息中心 机房B',
+    category: '设备故障',
+    description: '机房B的核心路由器出现频繁重启现象。',
+    status: 'pending',
+    created_at: '2025-05-09 09:10',
+  },
+];
